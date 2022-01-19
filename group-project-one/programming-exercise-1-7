@@ -1,1 +1,10 @@
-
+class MovieQuoteInfo 
+{
+    public static void main(String[] abc) 
+    {
+        System.out.println("Hasta La Vista Baby,");
+        System.out.println("said by Terminator");
+        System.out.println("in the movie Terminator");
+        System.out.println("in 1984.");
+    }
+}
