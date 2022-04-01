@@ -13,25 +13,23 @@ public class DebugSix3
     final int MIN = 1;
     final int MAX = 20;
     System.out.println("Enter a number between " + MIN + " and " + MAX + " inclusive");
-    userNumString = input.nextLine();//missing the line 
-    userNum = Integer.parseInt(userNumString);//Integer spelled wrong(syntax error)
-    while(userNum < MIN || userNum > MAX)
+    userNumString = input.next();
+    userNum = Integer.parseInt(userNumString); //fixed typo in integer
+    while(userNum < MIN || userNum > MAX) //changed second argument to boolean(>) instead of int(=)
     {
        System.out.println("Number out of range" +
        "\nEnter a number between " + MIN + " and " + MAX + " inclusive");
-       userNumString = input.nextLine();//missing "line" after next 
-       userNum = Integer.parseInt(userNumString);//missing Int after parse
+       userNumString = input.next();
+       userNum = Integer.parseInt(userNumString); //parse missing "Int"
     }
-    for(val = userNum; val > 0; --val)
+    for(val = userNum; val > 0; val--) //fixed logic error with comparison sign
     {
       System.out.print(val + "  ");
-    
-      for(int x = 0; x < 100000; ++x);
+      for(int x = 0; x < 100000; ++x)
         for(int y = 0; y < 10000; ++y);
         // Adjust these numbers for faster or slower performance
     }
     System.out.println("Blastoff!");
   }
 }
-
 
